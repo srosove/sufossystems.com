@@ -37,29 +37,26 @@ a:hover { text-decoration: underline; }
 
 .top .container {
   display: flex;
-  align-items: center;           /* keeps nav and brand aligned */
+  align-items: flex-end;     /* THIS is the key change */
   justify-content: space-between;
-  gap: 18px;
-  padding: 20px 0;
+  padding: 28px 0;
 }
 
 .brand {
   display: flex;
-  align-items: center;
-  gap: 18px;
-  min-width: 320px;
+  align-items: flex-end;  /* align tagline with nav baseline */
+  gap: 24px;
 }
 
 .taglineInline {
-  font-size: 16px;
-  color: var(--muted);
+  font-size: 17px;
+  color: #5f6c7b;
   font-weight: 500;
-  line-height: 1.2;
-  max-width: 360px;
+  margin-bottom: 12px;   /* fine tune vertical baseline */
 }
 
 .logo {
-  height: 90px;   /* big, but still clean */
+  height: 120px;   /* large, authoritative */
   width: auto;
   object-fit: contain;
 }
@@ -79,10 +76,8 @@ a:hover { text-decoration: underline; }
 
 .nav {
   display: flex;
-  gap: 14px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 22px;
 }
 
 .nav a {
