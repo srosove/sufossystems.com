@@ -293,3 +293,17 @@ h2 {
 
   .nav { justify-content: flex-start; }
 }
+
+.contactPrimary {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contactPrimary a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+
+.contactPrimary a:hover {
+  text-decoration: underline;
+}
