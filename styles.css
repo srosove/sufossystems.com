@@ -36,14 +36,14 @@ a:hover { text-decoration: underline; }
 }
 
 .top .container {
-  padding: 22px 0;
+  padding: 28px 0;
+  align-items: center;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-width: 240px;
+  gap: 18px;
 }
 
 .logo {
@@ -53,17 +53,16 @@ a:hover { text-decoration: underline; }
 }
 
 .wordmark .name {
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.3px;
-  line-height: 1.15;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.2px;
+  color: #0f1b2d;
 }
 
 .wordmark .tagline {
-  margin-top: 4px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.80);
+  color: #5f6c7b;
+  margin-top: 4px;
 }
 
 .nav {
