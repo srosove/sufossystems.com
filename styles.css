@@ -12,14 +12,16 @@
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color: var(--text);
-  background: linear-gradient(180deg, #f6f8fb, #ffffff);
+  background: linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
-a { color: rgba(255,255,255,0.92); text-decoration: none; }
+/* Links (light theme) */
+a { color: var(--accent2); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .container {
@@ -27,45 +29,73 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-.nav {
-  display: flex;
-  align-items: flex-end;
-  gap: 22px;
+/* ---------- Header ---------- */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
-.wordmark .name {
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;          /* align tagline with nav */
+  gap: 24px;
+  padding: 20px 0 14px;           /* bottom-weighted */
+}
+
+.brand {
+  display: flex;
+  align-items: flex-end;          /* align baseline */
+  gap: 26px;
+  min-width: 420px;
+}
+
+/* BIG logo */
+.logo {
+  height: 135px;                  /* increase/decrease here */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Tagline beside logo, aligned with nav */
+.taglineInline {
   font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  color: #0f1b2d;
-}
-
-.wordmark .tagline {
-  font-size: 14px;
-  color: #5f6c7b;
-  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 12px;            /* baseline tuning */
+  white-space: nowrap;
 }
 
 .nav {
   display: flex;
   align-items: flex-end;
   gap: 22px;
+  white-space: nowrap;
 }
 
+/* nav links should be muted, not accent */
 .nav a {
   color: var(--muted);
   font-size: 14px;
+  text-decoration: none;
 }
-
 .nav a:hover { color: var(--text); text-decoration: none; }
 
+/* Contact pill in light theme */
 .pill {
   padding: 8px 12px;
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255,255,255,0.04);
+  background: #ffffff;
 }
 
+/* ---------- Hero ---------- */
 .hero {
   padding: 74px 0 44px;
 }
@@ -104,15 +134,18 @@ h1 {
   color: white;
   font-weight: 600;
   text-decoration: none;
+  border: 1px solid rgba(15, 27, 45, 0.08);
 }
 
 .button:hover { text-decoration: none; filter: brightness(1.06); }
 
 .button.ghost {
-  background: rgba(255,255,255,0.06);
+  background: #ffffff;
   color: var(--text);
+  border: 1px solid var(--border);
 }
 
+/* ---------- Cards ---------- */
 .cards {
   margin-top: 26px;
   display: grid;
@@ -121,8 +154,8 @@ h1 {
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #e5e9f2;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 16px;
   box-shadow: 0 8px 24px rgba(15, 27, 45, 0.05);
@@ -139,13 +172,14 @@ h1 {
   font-size: 14.5px;
 }
 
+/* ---------- Sections ---------- */
 .section {
   padding: 46px 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(15, 27, 45, 0.07);
 }
 
 .section.alt {
-  background: rgba(255,255,255,0.03);
+  background: rgba(11, 93, 182, 0.03);
 }
 
 h2 {
@@ -163,9 +197,10 @@ h2 {
 
 .panel {
   border-radius: 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #ffffff;
+  border: 1px solid var(--border);
   padding: 16px;
+  box-shadow: 0 8px 24px rgba(15, 27, 45, 0.04);
 }
 
 .panel h3 {
@@ -180,6 +215,7 @@ h2 {
   font-size: 14.5px;
 }
 
+/* ---------- Bullets ---------- */
 .bullets {
   margin-top: 18px;
   display: grid;
@@ -193,8 +229,9 @@ h2 {
   align-items: start;
   padding: 14px 14px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(15, 27, 45, 0.04);
 }
 
 .dot {
@@ -203,16 +240,18 @@ h2 {
   margin-top: 5px;
   border-radius: 999px;
   background: linear-gradient(180deg, var(--accent), var(--accent2));
-  box-shadow: 0 0 0 3px rgba(11,93,182,0.18);
+  box-shadow: 0 0 0 3px rgba(11, 93, 182, 0.18);
 }
 
+/* ---------- Contact ---------- */
 .contactBox {
   margin-top: 16px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #ffffff;
+  border: 1px solid var(--border);
   padding: 14px;
   max-width: 620px;
+  box-shadow: 0 8px 24px rgba(15, 27, 45, 0.04);
 }
 
 .contactRow {
@@ -232,9 +271,26 @@ h2 {
   padding-bottom: 8px;
 }
 
+/* ---------- Mobile ---------- */
 @media (max-width: 880px) {
   .cards { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
-  .top .container { flex-direction: column; align-items: flex-start; }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 0 14px;
+  }
+
+  .brand {
+    min-width: 0;
+    align-items: flex-start;
+  }
+
+  .taglineInline {
+    white-space: normal;
+    margin-bottom: 0;
+  }
+
   .nav { justify-content: flex-start; }
 }
