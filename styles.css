@@ -47,11 +47,9 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
-  height: 56px;
+  height: 68px;
   width: auto;
   object-fit: contain;
-  padding: 0;
-  background: none;
 }
 
 .wordmark .name {
