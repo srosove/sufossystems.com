@@ -50,9 +50,12 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
-  height: 54px;
+  height: 52px;
   width: auto;
   object-fit: contain;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 8px 10px;
+  border-radius: 12px;
 }
 
 .wordmark .name {
