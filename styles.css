@@ -53,7 +53,7 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
-  height: 178px;  /* 155 * 1.15 = 178 (logo +15% again, but clean) */
+  height: 115px;  /* 155 * 1.15 = 178 (logo +15% again, but clean) */
   width: auto;
   display: block;
   object-fit: contain;
