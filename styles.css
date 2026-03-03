@@ -42,16 +42,14 @@ a:hover { text-decoration: underline; }
 .headerRow {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: end;
+  align-items: center;   /* THIS is the fix */
   gap: 24px;
-  padding: 18px 0 14px;
-  border-bottom: 0;
+  padding: 22px 0;
 }
 
 .brand {
   display: flex;
-  align-items: end;
-  gap: 0;
+  align-items: center;
 }
 
 .logo {
@@ -63,19 +61,16 @@ a:hover { text-decoration: underline; }
 
 .taglineInline {
   justify-self: center;
-  align-self: end;
   font-size: 18px;
   color: var(--muted);
   font-weight: 600;
-  padding-bottom: 10px; /* aligns with nav baseline */
   white-space: nowrap;
 }
 
 .nav {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 22px;
-  white-space: nowrap;
 }
 
 /* nav links should be muted, not accent */
