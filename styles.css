@@ -10,6 +10,11 @@
   --accent2: #0a4a8f;
 }
 
+/* Offset anchor jumps for sticky header */
+#approach, #focus, #contact {
+  scroll-margin-top: 140px; /* adjust if needed */
+}
+
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
