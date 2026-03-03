@@ -42,9 +42,9 @@ a:hover { text-decoration: underline; }
 .headerRow {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: center;   /* THIS is the fix */
+  align-items: center;
   gap: 24px;
-  padding: 22px 0;
+  padding: 8px 0;   /* reduced from 22px */
 }
 
 .brand {
